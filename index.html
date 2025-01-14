@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtreo demo</title>
+</head>
+<body>
+    <button class="filter-button">Filter</button>
+    <table class="example">
+        <thead>
+            <tr>
+                <th class="f-label" f-idx="1">Subjects</th>
+                <th class="f-label" f-idx="2" sorted>Date</th>
+                <th f-idx="3" sortable sorted>Time</th>
+                <th>Chapter</th>
+                <th class="f-label" not-sortable f-idx="5">Finished</th>
+            </tr>
+        </thead>
+        <tbody class="calendar-tbody">
+            <tr>
+                <td f-column-idx="1" class="f-value subject-name">French</td>
+                <td f-column-idx="2" class="f-value subject-date">2025-01-20</td>
+                <td f-column-idx="3" class="f-value subject-time">10:00:00</td>
+                <td class="f-value subject-chapter">1</td>
+                <td f-column-idx="5" class="status done">
+                    <svg value-like="Done" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x x">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </td>
+            </tr>
+            <tr>
+                <td f-column-idx="1" class="f-value subject-name">English</td>
+                <td f-column-idx="2" class="f-value subject-date">2025-01-20</td>
+                <td f-column-idx="3" class="f-value subject-time">14:00:00</td>
+                <td class="f-value subject-chapter">1</td>
+                <td f-column-idx="5" class="status todo">
+                    <svg value-like="To do" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="check">
+                        <path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/>
+                    </svg>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script type="module" src="./src/index.js"></script>
+</html>
