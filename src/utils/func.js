@@ -1,4 +1,4 @@
-
+import { NotADateError } from "./class.js"
 /**
  * 
  * @param {any} element 

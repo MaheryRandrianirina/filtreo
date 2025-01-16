@@ -7,7 +7,6 @@ export class HTMLTable {
     constructor(table, options = null, firstOptionValue = "aucun")
     {
         this.table = table;
-        console.log("table", this.table)
         this.firstOptionValue = firstOptionValue;
         this.options = options;
         this.alphabets = {
