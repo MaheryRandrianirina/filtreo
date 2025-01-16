@@ -1,0 +1,89 @@
+html {
+    --black: #2c2c2c;
+    --success: #69e231;
+    --fail: #f33b3b;
+    --primary: #29d0fa;
+    --secondary: #dddbdb;
+}
+
+body {
+    padding: 50px;
+}
+
+button {
+    background-color: var(--primary);
+    padding: 12px;
+    border-radius: 4px;
+    border: transparent;
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--secondary);
+}
+
+.agenda {
+    text-align: left;
+    border-collapse: collapse;
+    color: var(--black);
+    width: 100%;
+    transform: translateY(30px);
+
+    thead {
+        border-bottom: 1px solid var(--black);
+    }
+
+    .calendar-tbody {
+        letter-spacing: 2px;
+        .subject-name {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .subject-chapter, .subject-time {
+            font-weight: bold;
+        }
+        .status.undone {
+            color: var(--fail);
+        }
+    }
+
+    td, th {
+        padding: 10px;
+        position: relative;
+        width: 20%;
+        svg {
+            width: 20px;
+            font-size: 20px;
+            color: var(--black);
+            display: inline-block;
+            margin-left: 15px;
+            margin-bottom: -4px;
+        }
+
+        svg.sort-icon {
+            fill: var(--primary);
+            width: 12px;
+        }
+
+        .check {
+            fill: var(--success);
+        }
+
+        .x {
+            stroke: var(--fail);
+        }
+    }
+
+    tr {
+        border-radius: 5px;
+    }
+
+    tr:nth-child(2n) {
+        background: var(--secondary);
+    }
+
+    .f-label select {
+        width: 80px;
+    }
+}
